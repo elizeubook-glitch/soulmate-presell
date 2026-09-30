@@ -1,5 +1,5 @@
 // Encrypted ClickBank HopLink generated for this affiliate account.
-const AFFILIATE_URL = "https://c34dbbz59606jg9p1tmzy-5xc6.hop.clickbank.net";
+const AFFILIATE_URL = "https://b7a52cnc26vdhj4du9fn1-dk1d.hop.clickbank.net";
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
