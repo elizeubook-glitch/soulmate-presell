@@ -1,0 +1,83 @@
+:root{
+  --bg:#0d0b16; --panel:#171327; --panel2:#211a36;
+  --text:#f7f3ff; --muted:#bdb6ce; --accent:#e9b7ff;
+  --accent2:#ffd7a6; --border:rgba(255,255,255,.1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:radial-gradient(circle at 80% 5%,#30204e 0,transparent 28%),var(--bg);
+  color:var(--text); line-height:1.6;
+}
+button,a{font:inherit}
+.site-header{
+  width:min(1120px,92%); margin:auto; padding:24px 0;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.brand{color:var(--text);text-decoration:none;font-weight:800;letter-spacing:-.02em}
+.tag{font-size:.82rem;color:var(--muted);border:1px solid var(--border);padding:6px 10px;border-radius:999px}
+main{width:min(1120px,92%);margin:auto}
+.hero{
+  min-height:72vh;display:grid;grid-template-columns:1.2fr .8fr;
+  gap:60px;align-items:center;padding:72px 0 90px;
+}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-weight:800;font-size:.75rem;color:var(--accent)}
+h1{font-size:clamp(2.7rem,6vw,5.5rem);line-height:.98;letter-spacing:-.055em;margin:.18em 0 .3em;max-width:900px}
+h2{font-size:clamp(2rem,4vw,3.6rem);line-height:1.05;letter-spacing:-.045em;margin:.2em 0 .5em}
+h3{font-size:1.15rem;margin:.55em 0}
+.lede{font-size:clamp(1.05rem,2vw,1.35rem);color:var(--muted);max-width:700px}
+.disclosure{
+  max-width:700px;padding:12px 14px;border-left:3px solid var(--accent2);
+  background:rgba(255,255,255,.045);color:#ddd6e8;font-size:.9rem
+}
+.cta{
+  border:0;border-radius:14px;padding:16px 22px;margin-top:12px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#181020;font-weight:900;cursor:pointer;box-shadow:0 14px 38px rgba(222,169,255,.15);
+}
+.cta:hover{transform:translateY(-1px)}
+.secondary{background:#fff;color:#171327}
+.micro{font-size:.78rem;color:var(--muted);margin-top:8px}
+.visual{position:relative;height:430px;display:grid;place-items:center}
+.card{
+  width:min(310px,80%);height:390px;border-radius:28px;position:absolute;
+  border:1px solid rgba(255,255,255,.18);box-shadow:0 30px 80px rgba(0,0,0,.38);
+}
+.card-back{transform:rotate(10deg) translate(25px,-8px);background:linear-gradient(145deg,#5c376b,#251e39)}
+.card-front{
+  transform:rotate(-4deg);background:linear-gradient(155deg,#21182f,#3c2850);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden
+}
+.moon{font-size:7rem;color:var(--accent2);text-shadow:0 0 35px rgba(255,215,166,.2)}
+.spark{font-size:2rem;color:var(--accent);margin-top:28px}
+.line{height:2px;width:55%;background:rgba(255,255,255,.35);margin-top:22px}
+.line.short{width:36%;margin-top:12px}
+.section{padding:100px 0}
+.section-head{max-width:760px}
+.grid{display:grid;gap:18px;margin-top:34px}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+.info-card{padding:26px;border:1px solid var(--border);border-radius:22px;background:rgba(255,255,255,.035)}
+.info-card span{font-weight:900;color:var(--accent2);font-size:.78rem}
+.info-card p{color:var(--muted);margin-bottom:0}
+.contrast{
+  margin:50px 0;padding:70px;border-radius:32px;
+  background:linear-gradient(135deg,var(--panel),var(--panel2));border:1px solid var(--border)
+}
+.checklist{display:grid;gap:12px;margin:30px 0}
+.checklist>div{display:grid;grid-template-columns:34px 1fr;gap:10px;padding:14px 0;border-bottom:1px solid var(--border)}
+.checklist b{color:var(--accent2);font-size:1.2rem}
+.checklist p{margin:0;color:var(--muted)}
+.checklist strong{color:var(--text)}
+.final{max-width:850px;margin:auto;text-align:center}
+.final .disclosure{margin:22px auto;text-align:left}
+footer{width:min(1120px,92%);margin:80px auto 0;padding:28px 0 45px;border-top:1px solid var(--border);color:var(--muted);font-size:.82rem}
+footer p{margin:.35em 0}
+@media (max-width:780px){
+  .hero{grid-template-columns:1fr;gap:10px;padding-top:45px}
+  .visual{height:330px}
+  .card{height:300px;width:230px}
+  .grid.three{grid-template-columns:1fr}
+  .contrast{padding:36px 22px}
+  .section{padding:70px 0}
+}
